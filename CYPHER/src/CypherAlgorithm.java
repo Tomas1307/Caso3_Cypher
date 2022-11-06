@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.security.PublicKey;
 
-public class Cifrado {
+public class CypherAlgorithm {
 	
 	private BigInteger y ;
 	private BigInteger z;
@@ -12,7 +12,7 @@ public class Cifrado {
 	
 	private BigInteger P;
 
-	public Cifrado(BigInteger gmain, BigInteger pmain, BigInteger gxmain) {
+	public CypherAlgorithm(BigInteger gmain, BigInteger pmain, BigInteger gxmain) {
 		this.G = gmain;
 		this.P = pmain;
 		this.Gx = gxmain;

@@ -7,11 +7,11 @@ public class App {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Ingrese 'SECURE INIT' si desea comenzar con el programa ");
+		System.out.println("Please type 'SECURE INIT' if you wish to begin ");
 		
-		String iniciar = sc.next();
+		String begin = sc.next();
 		
-		Boolean centinela = true; 
+		Boolean sentinel = true; 
 		
 	    BigInteger Pmain = null;
 		
@@ -19,25 +19,25 @@ public class App {
 		
 		BigInteger Gxmain = null;
 		
-		if( iniciar.equals("SECURE INIT")) {
+		if( begin.equals("SECURE INIT")) {
 		System.out.println("Para detener la ejecucion precione la tecla '.' ");
 		
-		while (centinela) {
+		while (sentinel) {
 		
-			System.out.println("Ingrese un valor primo P: ");
+			System.out.println("value for P: ");
 			Pmain = sc.nextBigInteger();
 			
-			System.out.println("Ingrese un valor para G (<P) : ");
+			System.out.println("value for G (<P) : ");
 			Gmain = sc.nextBigInteger();
 			
 			
-			System.out.println("Ingrese un valor para Gx (<p-1): ");
+			System.out.println("value for Gx (<p-1): ");
 			Gxmain = sc.nextBigInteger();
-			centinela = false;
+			sentinel = false;
 			
 			}
 		
-		Cifrado cypher = new Cifrado(Gmain,Pmain,Gxmain);
+		CypherAlgorithm cypher = new CypherAlgorithm(Gmain,Pmain,Gxmain);
 			
 			
 		}
